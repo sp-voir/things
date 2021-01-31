@@ -13,9 +13,11 @@ public extension Color {
 
 struct Test: View {
     var body: some View {
-        Text("1234543534")
+        VStack {
+        Text("123443543")
             .padding()
             .background(Color.deepPink)
+        }
     }
 }
 

@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  RemoteConfig+Combine.swift
 //  
 //
 //  Created by Sergey Pugach on 27.01.21.

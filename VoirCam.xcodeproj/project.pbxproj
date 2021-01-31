@@ -7,26 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BF376608258171CC005548BB /* ComposableUIKitArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = BF376607258171CC005548BB /* ComposableUIKitArchitecture */; };
-		BF61B4CE25812D5F0033ACBC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF61B4CD25812D5F0033ACBC /* ContentView.swift */; };
+		BF1C1E3125C32F2B00FA7EEA /* Paywall in Frameworks */ = {isa = PBXBuildFile; productRef = BF1C1E3025C32F2B00FA7EEA /* Paywall */; };
+		BF1C1E3725C3F31200FA7EEA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF1C1E3325C3F23300FA7EEA /* GoogleService-Info.plist */; };
+		BF61B4CE25812D5F0033ACBC /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF61B4CD25812D5F0033ACBC /* AppView.swift */; };
 		BF61B4D025812D600033ACBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF61B4CF25812D600033ACBC /* Assets.xcassets */; };
 		BF61B4D325812D600033ACBC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF61B4D225812D600033ACBC /* Preview Assets.xcassets */; };
 		BF61B4D625812D600033ACBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF61B4D425812D600033ACBC /* LaunchScreen.storyboard */; };
+		BF673C1225C493C500033156 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF673C1125C493C500033156 /* StoreKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BF1C1E3325C3F23300FA7EEA /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BF1C1E3525C3F25B00FA7EEA /* TODO.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = TODO.md; sourceTree = "<group>"; };
 		BF37660A2581752F005548BB /* VoirCam.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VoirCam.entitlements; sourceTree = "<group>"; };
-		BF37660F2581783D005548BB /* App */ = {isa = PBXFileReference; lastKnownFileType = folder; path = App; sourceTree = "<group>"; };
-		BF3766112581787C005548BB /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = "<group>"; };
-		BF376613258178DD005548BB /* Core */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Core; sourceTree = "<group>"; };
-		BF37661525817901005548BB /* Models */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Models; sourceTree = "<group>"; };
 		BF61B4C625812D5F0033ACBC /* VoirCam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VoirCam.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		BF61B4CD25812D5F0033ACBC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BF61B4CD25812D5F0033ACBC /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		BF61B4CF25812D600033ACBC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF61B4D225812D600033ACBC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BF61B4D525812D600033ACBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF61B4D725812D600033ACBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BF61B4E025812E6B0033ACBC /* SPMDependencies */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SPMDependencies; sourceTree = "<group>"; };
+		BF673C1125C493C500033156 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		BF83A90B25C72869003073EC /* App */ = {isa = PBXFileReference; lastKnownFileType = folder; path = App; sourceTree = "<group>"; };
+		BF83A90C25C72869003073EC /* Views */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Views; sourceTree = "<group>"; };
+		BF83A90D25C72869003073EC /* Extensions */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Extensions; sourceTree = "<group>"; };
+		BF83A90E25C72869003073EC /* Core */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Core; sourceTree = "<group>"; };
+		BF83A90F25C7286A003073EC /* Onboarding */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Onboarding; sourceTree = "<group>"; };
+		BF83A91025C7286A003073EC /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = "<group>"; };
+		BF83A91125C7286A003073EC /* ExternalDependencies */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ExternalDependencies; sourceTree = "<group>"; };
+		BF83A91225C7286A003073EC /* Paywall */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Paywall; sourceTree = "<group>"; };
+		BF83A91325C7286A003073EC /* Models */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Models; sourceTree = "<group>"; };
+		BF83A91825C72894003073EC /* RemoteConfiguration */ = {isa = PBXFileReference; lastKnownFileType = text; name = RemoteConfiguration; path = Modules/RemoteConfiguration; sourceTree = SOURCE_ROOT; };
+		BF83A91925C72894003073EC /* InAppPurchases */ = {isa = PBXFileReference; lastKnownFileType = text; name = InAppPurchases; path = Modules/InAppPurchases; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,7 +45,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF376608258171CC005548BB /* ComposableUIKitArchitecture in Frameworks */,
+				BF1C1E3125C32F2B00FA7EEA /* Paywall in Frameworks */,
+				BF673C1225C493C500033156 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,14 +56,10 @@
 		BF61B4BD25812D5E0033ACBC = {
 			isa = PBXGroup;
 			children = (
-				BF61B4C825812D5F0033ACBC /* VoirCam */,
-				BF61B4E025812E6B0033ACBC /* SPMDependencies */,
-				BF37661525817901005548BB /* Models */,
-				BF376613258178DD005548BB /* Core */,
-				BF3766112581787C005548BB /* Resources */,
-				BF37660F2581783D005548BB /* App */,
-				BF61B4C725812D5F0033ACBC /* Products */,
+				BF83A78025C72848003073EC /* Modules */,
 				BFCBB644258164BF00C5F71A /* Frameworks */,
+				BF61B4C725812D5F0033ACBC /* Products */,
+				BF61B4C825812D5F0033ACBC /* VoirCam */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,12 +74,14 @@
 		BF61B4C825812D5F0033ACBC /* VoirCam */ = {
 			isa = PBXGroup;
 			children = (
+				BF1C1E3325C3F23300FA7EEA /* GoogleService-Info.plist */,
 				BF37660A2581752F005548BB /* VoirCam.entitlements */,
-				BF61B4CD25812D5F0033ACBC /* ContentView.swift */,
+				BF61B4CD25812D5F0033ACBC /* AppView.swift */,
 				BF61B4CF25812D600033ACBC /* Assets.xcassets */,
 				BF61B4D425812D600033ACBC /* LaunchScreen.storyboard */,
 				BF61B4D725812D600033ACBC /* Info.plist */,
 				BF61B4D125812D600033ACBC /* Preview Content */,
+				BF1C1E3525C3F25B00FA7EEA /* TODO.md */,
 			);
 			path = VoirCam;
 			sourceTree = "<group>";
@@ -84,9 +94,36 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		BF83A78025C72848003073EC /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				BF83A90B25C72869003073EC /* App */,
+				BF83A90E25C72869003073EC /* Core */,
+				BF83A90D25C72869003073EC /* Extensions */,
+				BF83A91125C7286A003073EC /* ExternalDependencies */,
+				BF83A91325C7286A003073EC /* Models */,
+				BF83A90F25C7286A003073EC /* Onboarding */,
+				BF83A91225C7286A003073EC /* Paywall */,
+				BF83A91025C7286A003073EC /* Resources */,
+				BF83A91725C7288A003073EC /* Services */,
+				BF83A90C25C72869003073EC /* Views */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		BF83A91725C7288A003073EC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BF83A91925C72894003073EC /* InAppPurchases */,
+				BF83A91825C72894003073EC /* RemoteConfiguration */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		BFCBB644258164BF00C5F71A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BF673C1125C493C500033156 /* StoreKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -108,7 +145,7 @@
 			);
 			name = VoirCam;
 			packageProductDependencies = (
-				BF376607258171CC005548BB /* ComposableUIKitArchitecture */,
+				BF1C1E3025C32F2B00FA7EEA /* Paywall */,
 			);
 			productName = VoirCam;
 			productReference = BF61B4C625812D5F0033ACBC /* VoirCam.app */;
@@ -151,6 +188,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF1C1E3725C3F31200FA7EEA /* GoogleService-Info.plist in Resources */,
 				BF61B4D625812D600033ACBC /* LaunchScreen.storyboard in Resources */,
 				BF61B4D325812D600033ACBC /* Preview Assets.xcassets in Resources */,
 				BF61B4D025812D600033ACBC /* Assets.xcassets in Resources */,
@@ -164,7 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF61B4CE25812D5F0033ACBC /* ContentView.swift in Sources */,
+				BF61B4CE25812D5F0033ACBC /* AppView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,12 +347,12 @@
 				DEVELOPMENT_TEAM = HZQA4VJ5NY;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = VoirCam/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.voir.VoirCam;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ommy3d.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
@@ -333,12 +371,12 @@
 				DEVELOPMENT_TEAM = HZQA4VJ5NY;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = VoirCam/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.voir.VoirCam;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ommy3d.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
@@ -370,9 +408,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		BF376607258171CC005548BB /* ComposableUIKitArchitecture */ = {
+		BF1C1E3025C32F2B00FA7EEA /* Paywall */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = ComposableUIKitArchitecture;
+			productName = Paywall;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

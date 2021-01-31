@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  AppView.swift
 //  VoirCam
 //
 //  Created by Sergey Pugach on 12/9/20.
@@ -14,7 +14,7 @@ import ComposableArchitecture
 import Firebase
 
 @main
-struct ContentView: App {
+struct AppView: App {
     
     init() {
         FirebaseConfiguration.shared.setLoggerLevel(.debug)
@@ -28,7 +28,7 @@ struct ContentView: App {
                     initialState: PaywallV1.State.initial,
                     reducer: PaywallV1.reducer,
                     environment: PaywallV1.Environment(
-                        remoteConfiguration: .live
+                        remoteConfiguration: RemoteConfiguration()
                     )
                 )
             )
