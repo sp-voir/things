@@ -8,6 +8,7 @@
 import SwiftUI
 import ComposableArchitecture
 import RemoteConfiguration
+import InAppPurchases
 import Views
 
 public struct PaywallV1View: View {
@@ -95,7 +96,8 @@ struct PaywallV1View_Previews: PreviewProvider {
                 initialState: .initial,
                 reducer: PaywallV1.reducer,
                 environment: PaywallV1.Environment(
-                    remoteConfiguration: RemoteConfiguration.mock
+                    remoteConfiguration: RemoteConfiguration.mock,
+                    purchases: InAppPurchases.mock
                 )
             )
         )

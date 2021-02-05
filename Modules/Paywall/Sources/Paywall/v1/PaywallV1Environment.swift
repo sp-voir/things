@@ -6,13 +6,19 @@
 //
 
 import RemoteConfiguration
+import InAppPurchases
 
 extension PaywallV1 {
     public struct Environment {
         let remoteConfiguration: RemoteConfigurable
+        let purchases: InAppPurchasable
         
-        public init(remoteConfiguration: RemoteConfigurable) {
+        public init(
+            remoteConfiguration: RemoteConfigurable,
+            purchases: InAppPurchasable
+        ) {
             self.remoteConfiguration = remoteConfiguration
+            self.purchases = purchases
         }
     }
 }

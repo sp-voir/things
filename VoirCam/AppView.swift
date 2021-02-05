@@ -6,8 +6,7 @@
 //
 
 import SwiftUI
-//import Onboarding
-//import Views
+import InAppPurchases
 import Paywall
 import RemoteConfiguration
 import ComposableArchitecture
@@ -28,7 +27,8 @@ struct AppView: App {
                     initialState: PaywallV1.State.initial,
                     reducer: PaywallV1.reducer,
                     environment: PaywallV1.Environment(
-                        remoteConfiguration: RemoteConfiguration()
+                        remoteConfiguration: RemoteConfiguration(),
+                        purchases: InAppPurchases()
                     )
                 )
             )

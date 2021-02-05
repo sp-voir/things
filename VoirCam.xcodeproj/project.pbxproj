@@ -13,7 +13,7 @@
 		BF61B4D025812D600033ACBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF61B4CF25812D600033ACBC /* Assets.xcassets */; };
 		BF61B4D325812D600033ACBC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF61B4D225812D600033ACBC /* Preview Assets.xcassets */; };
 		BF61B4D625812D600033ACBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF61B4D425812D600033ACBC /* LaunchScreen.storyboard */; };
-		BF673C1225C493C500033156 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF673C1125C493C500033156 /* StoreKit.framework */; };
+		BF8F3BD125CC6B2200E2FCAC /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF673C1125C493C500033156 /* StoreKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +29,6 @@
 		BF673C1125C493C500033156 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		BF83A90B25C72869003073EC /* App */ = {isa = PBXFileReference; lastKnownFileType = folder; path = App; sourceTree = "<group>"; };
 		BF83A90C25C72869003073EC /* Views */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Views; sourceTree = "<group>"; };
-		BF83A90D25C72869003073EC /* Extensions */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Extensions; sourceTree = "<group>"; };
 		BF83A90E25C72869003073EC /* Core */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Core; sourceTree = "<group>"; };
 		BF83A90F25C7286A003073EC /* Onboarding */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Onboarding; sourceTree = "<group>"; };
 		BF83A91025C7286A003073EC /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = "<group>"; };
@@ -38,6 +37,7 @@
 		BF83A91325C7286A003073EC /* Models */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Models; sourceTree = "<group>"; };
 		BF83A91825C72894003073EC /* RemoteConfiguration */ = {isa = PBXFileReference; lastKnownFileType = text; name = RemoteConfiguration; path = Modules/RemoteConfiguration; sourceTree = SOURCE_ROOT; };
 		BF83A91925C72894003073EC /* InAppPurchases */ = {isa = PBXFileReference; lastKnownFileType = text; name = InAppPurchases; path = Modules/InAppPurchases; sourceTree = SOURCE_ROOT; };
+		BF8F3BCD25CC675500E2FCAC /* Extensions */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Extensions; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +46,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF1C1E3125C32F2B00FA7EEA /* Paywall in Frameworks */,
-				BF673C1225C493C500033156 /* StoreKit.framework in Frameworks */,
+				BF8F3BD125CC6B2200E2FCAC /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,7 +99,7 @@
 			children = (
 				BF83A90B25C72869003073EC /* App */,
 				BF83A90E25C72869003073EC /* Core */,
-				BF83A90D25C72869003073EC /* Extensions */,
+				BF8F3BCD25CC675500E2FCAC /* Extensions */,
 				BF83A91125C7286A003073EC /* ExternalDependencies */,
 				BF83A91325C7286A003073EC /* Models */,
 				BF83A90F25C7286A003073EC /* Onboarding */,

@@ -5,7 +5,9 @@
 //  Created by Sergey Pugach on 28.01.21.
 //
 
+import Combine
 import ComposableArchitecture
+import InAppPurchases
 
 extension PaywallV1 {
     
@@ -20,6 +22,21 @@ extension PaywallV1 {
             
         case .fetched:
             state.isLoading = false
+            return .init(value: .getCurrentPackages)
+            
+        case .getCurrentPackages:
+            state.isLoading = true
+            return environment.purchases.currentPackages()
+                .map({ Action.currentPackages($0) })
+                .catch({ (error: PurchasesError) -> AnyPublisher<Action, Never> in
+                    Just(Action.loadPackagesFailed(error))
+                        .eraseToAnyPublisher()
+                })
+                .eraseToEffect()
+            
+        case let .currentPackages(packages):
+            return .none
+        case let .loadPackagesFailed(error):
             return .none
         }
     }
