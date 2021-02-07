@@ -8,6 +8,7 @@
 import FirebaseApp
 import Combine
 import CombineExt
+import LoggerApp
 
 public struct RemoteConfiguration: RemoteConfigurable {
     
@@ -18,7 +19,7 @@ public struct RemoteConfiguration: RemoteConfigurable {
     }
     
     private let remoteConfig = RemoteConfig.remoteConfig()
-    
+    private let logger = Logger(label: "uniq label")
     //public let fetch1: (AnyHashable) -> Effect<RemoteConfigFetchStatus, Error>
     
     public init() {
@@ -28,6 +29,7 @@ public struct RemoteConfiguration: RemoteConfigurable {
         return remoteConfig
             .fetch(activateFetched: true)
             .handleEvents(receiveOutput: { status in
+                logger.info("ℹ️ \(status) - \(status.rawValue)")
                 let data = self.remoteConfig.configValue(forKey: Property.mainPaywall).dataValue
                 let decoder = JSONDecoder()
                 

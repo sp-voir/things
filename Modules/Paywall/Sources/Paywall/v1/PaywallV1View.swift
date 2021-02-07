@@ -6,15 +6,15 @@
 //
 
 import SwiftUI
-import ComposableArchitecture
+import ComposableArchitectureApp
 import RemoteConfiguration
 import InAppPurchases
 import Views
 import Core
 
-public struct PaywallV1View: View {
+public struct PaywallV1View: ComposableView {
     
-    private let store: Store<PaywallV1.State, PaywallV1.Action>
+    public let store: Store<PaywallV1.State, PaywallV1.Action>
     
     public init(store: Store<PaywallV1.State, PaywallV1.Action>) {
         self.store = store

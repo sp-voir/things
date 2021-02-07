@@ -16,6 +16,8 @@ import Firebase
 struct VoirCam: App {
     
     init() {
+        
+        //Or better configure in another place/module
         FirebaseConfiguration.shared.setLoggerLevel(.debug)
         FirebaseApp.configure()
     }
