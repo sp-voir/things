@@ -6,13 +6,12 @@
 //
 
 import FirebaseApp
-import ComposableArchitecture
+import Combine
 import CombineExt
 
 public struct RemoteConfiguration: RemoteConfigurable {
     
     public let mainPaywallConfig = CurrentValueRelay<PaywallConfig>(.default)
-    
     
     private enum Property {
         static let mainPaywall = "main_paywall"
@@ -25,7 +24,7 @@ public struct RemoteConfiguration: RemoteConfigurable {
     public init() {
     }
     
-    public func fetch() -> Effect<RemoteConfigFetchStatus, Error> {
+    public func fetch() -> AnyPublisher<RemoteConfigFetchStatus, RemoteConfigError> {
         return remoteConfig
             .fetch(activateFetched: true)
             .handleEvents(receiveOutput: { status in
@@ -37,7 +36,8 @@ public struct RemoteConfiguration: RemoteConfigurable {
                 }
                 mainPaywallConfig.accept(paywallConfig)
             })
-            .eraseToEffect()
+            .mapError(RemoteConfigError.init)
+            .eraseToAnyPublisher()
     }
 }
 
@@ -58,3 +58,9 @@ extension RemoteConfigurable {
 }
 //
 //private var dependencies: [AnyHashable: RemoteConfig] = [:]
+
+private extension RemoteConfigError {
+    init(_ error: Error) {
+        self = .other(error)
+    }
+}

@@ -12,8 +12,8 @@ let package = Package(
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
-            name: "ComposableUIKitArchitecture",
-            targets: ["ComposableUIKitArchitecture"]
+            name: "ComposableArchitectureApp",
+            targets: ["ComposableArchitectureApp", "LoggerApp"]
         ),
         .library(
             name: "LoggerApp",
@@ -21,16 +21,16 @@ let package = Package(
         ),
         .library(
             name: "Firebase",
-            targets: ["FirebaseApp"]
+            targets: ["FirebaseApp", "LoggerApp"]
         ),
         .library(
             name: "PurchasesApp",
-            targets: ["PurchasesApp"]
-        )
-//        .library(
-//            name: "CombineExt",
-//            targets: ["CombineExt"]
-//        )
+            targets: ["PurchasesApp", "LoggerApp"]
+        ),
+        .library(
+            name: "CombineExtApp",
+            targets: ["CombineExtApp"]
+        ),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -39,6 +39,7 @@ let package = Package(
         //.package(url: "https://github.com/firebase/firebase-ios-sdk", from: "7.4.0"),
         .package(name: "Firebase", url: "https://github.com/firebase/firebase-ios-sdk.git", .upToNextMajor(from: "7.4.0")),
         .package(url: "https://github.com/apple/swift-log", from: "1.4.0"),
+//        .package(name: "CombineExtApp", url: "https://github.com/CombineCommunity/CombineExt.git", .upToNextMajor(from: "1.2.0")),
         .package(url: "https://github.com/CombineCommunity/CombineExt.git", from: "1.2.0"),
         .package(name: "Purchases", url: "https://github.com/RevenueCat/purchases-ios.git", .upToNextMajor(from: "3.10.2")),
         //.package(url: "https://github.com/RevenueCat/purchases-ios.git", from: "3.10.2"),
@@ -47,7 +48,7 @@ let package = Package(
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
-            name: "ComposableUIKitArchitecture",
+            name: "ComposableArchitectureApp",
             dependencies: [
                 .product(
                     name: "ComposableArchitecture",
@@ -57,10 +58,6 @@ let package = Package(
                     name: "FunctionalClosures",
                     package: "swift-declarative-configuration"
                 ),
-                .product(
-                    name: "CombineExt",
-                    package: "CombineExt"
-                )
             ]
         ),
         .target(
@@ -92,10 +89,19 @@ let package = Package(
                 )
             ]
         ),
+        .target(
+            name: "CombineExtApp",
+            dependencies: [
+                .product(
+                    name:"CombineExt",
+                    package: "CombineExt"
+                )
+            ]
+        ),
         .testTarget(
             name: "ExternalDependenciesTests",
             dependencies: [
-                "ComposableUIKitArchitecture",
+                "ComposableArchitectureApp",
                 "LoggerApp",
                 "FirebaseApp",
             ]

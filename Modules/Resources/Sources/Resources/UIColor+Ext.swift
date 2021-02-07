@@ -5,6 +5,7 @@
 //  Created by Sergey Pugach on 4.01.21.
 //
 
+#if os(iOS)
 import UIKit
 
 //Please, use `myModule` instead of `module` to access from another packages
@@ -24,3 +25,4 @@ extension UIColor {
         )
     }
 }
+#endif

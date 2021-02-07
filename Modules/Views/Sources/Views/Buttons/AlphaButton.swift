@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import Extensions
+import Core
 
 public struct AlphaButton<Label>: View where Label: View {
     

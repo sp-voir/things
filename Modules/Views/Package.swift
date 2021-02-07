@@ -7,6 +7,7 @@ let package = Package(
     name: "Views",
     platforms: [
         .iOS(.v14),
+        .macOS(.v10_15),
     ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
@@ -17,7 +18,7 @@ let package = Package(
     dependencies: [
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
-        .package(path: "../Modules/Extensions"),
+        .package(path: "../Modules/Core"),
         .package(path: "../Modules/Resources"),
     ],
     targets: [
@@ -27,8 +28,8 @@ let package = Package(
             name: "Views",
             dependencies: [
                 .product(
-                    name: "Extensions",
-                    package: "Extensions"
+                    name: "Core",
+                    package: "Core"
                 ),
                 .product(
                     name: "Resources",

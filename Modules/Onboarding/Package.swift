@@ -20,7 +20,7 @@ let package = Package(
         // .package(url: /* package url */, from: "1.0.0"),
         .package(path: "../Modules/ExternalDependencies"),
         .package(path: "../Modules/Resources"),
-        .package(path: "../Modules/Extensions"),
+        .package(path: "../Modules/Core"),
         .package(path: "../Modules/Views"),
     ],
     targets: [
@@ -34,7 +34,7 @@ let package = Package(
 //                    package: "ExternalDependencies"
 //                ),
                 .product(
-                    name: "ComposableUIKitArchitecture",
+                    name: "ComposableArchitectureApp",
                     package: "ExternalDependencies"
                 ),
                 .product(
@@ -42,8 +42,8 @@ let package = Package(
                     package: "Resources"
                 ),
                 .product(
-                    name: "Extensions",
-                    package: "Extensions"
+                    name: "Core",
+                    package: "Core"
                 ),
                 .product(
                     name: "Views",

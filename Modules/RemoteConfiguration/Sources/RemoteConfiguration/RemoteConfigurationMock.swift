@@ -6,12 +6,14 @@
 //
 
 import Firebase
-import ComposableArchitecture
+import Combine
 
 public struct RemoteConfigurationMock: RemoteConfigurable {
     
-    public func fetch() -> Effect<RemoteConfigFetchStatus, Error> {
-        return .init(value: .success)
+    public func fetch() -> AnyPublisher<RemoteConfigFetchStatus, RemoteConfigError> {
+        return Just(RemoteConfigFetchStatus.success)
+            .setFailureType(to: RemoteConfigError.self)
+            .eraseToAnyPublisher()
     }
 }
 

@@ -7,6 +7,7 @@ let package = Package(
     name: "Paywall",
     platforms: [
         .iOS(.v14),
+        .macOS(.v10_15),
     ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
@@ -20,6 +21,7 @@ let package = Package(
         .package(path: "../Modules/Views"),
         .package(path: "../Services/RemoteConfiguration"),
         .package(path: "../Services/InAppPurchases"),
+        .package(path: "../ExternalDependencies"),
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
@@ -30,6 +32,10 @@ let package = Package(
                 .product(
                     name: "Views",
                     package: "Views"
+                ),
+                .product(
+                    name: "ComposableArchitectureApp",
+                    package: "ExternalDependencies"
                 ),
                 .product(
                     name: "RemoteConfiguration",

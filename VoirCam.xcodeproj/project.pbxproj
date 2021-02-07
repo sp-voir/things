@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		BF1C1E3125C32F2B00FA7EEA /* Paywall in Frameworks */ = {isa = PBXBuildFile; productRef = BF1C1E3025C32F2B00FA7EEA /* Paywall */; };
 		BF1C1E3725C3F31200FA7EEA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF1C1E3325C3F23300FA7EEA /* GoogleService-Info.plist */; };
-		BF61B4CE25812D5F0033ACBC /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF61B4CD25812D5F0033ACBC /* AppView.swift */; };
+		BF61B4CE25812D5F0033ACBC /* VoirCam.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF61B4CD25812D5F0033ACBC /* VoirCam.swift */; };
 		BF61B4D025812D600033ACBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF61B4CF25812D600033ACBC /* Assets.xcassets */; };
 		BF61B4D325812D600033ACBC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF61B4D225812D600033ACBC /* Preview Assets.xcassets */; };
 		BF61B4D625812D600033ACBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF61B4D425812D600033ACBC /* LaunchScreen.storyboard */; };
@@ -21,7 +21,7 @@
 		BF1C1E3525C3F25B00FA7EEA /* TODO.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = TODO.md; sourceTree = "<group>"; };
 		BF37660A2581752F005548BB /* VoirCam.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VoirCam.entitlements; sourceTree = "<group>"; };
 		BF61B4C625812D5F0033ACBC /* VoirCam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VoirCam.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		BF61B4CD25812D5F0033ACBC /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
+		BF61B4CD25812D5F0033ACBC /* VoirCam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoirCam.swift; sourceTree = "<group>"; };
 		BF61B4CF25812D600033ACBC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF61B4D225812D600033ACBC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BF61B4D525812D600033ACBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -34,10 +34,8 @@
 		BF83A91025C7286A003073EC /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = "<group>"; };
 		BF83A91125C7286A003073EC /* ExternalDependencies */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ExternalDependencies; sourceTree = "<group>"; };
 		BF83A91225C7286A003073EC /* Paywall */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Paywall; sourceTree = "<group>"; };
-		BF83A91325C7286A003073EC /* Models */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Models; sourceTree = "<group>"; };
 		BF83A91825C72894003073EC /* RemoteConfiguration */ = {isa = PBXFileReference; lastKnownFileType = text; name = RemoteConfiguration; path = Modules/RemoteConfiguration; sourceTree = SOURCE_ROOT; };
 		BF83A91925C72894003073EC /* InAppPurchases */ = {isa = PBXFileReference; lastKnownFileType = text; name = InAppPurchases; path = Modules/InAppPurchases; sourceTree = SOURCE_ROOT; };
-		BF8F3BCD25CC675500E2FCAC /* Extensions */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Extensions; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +74,7 @@
 			children = (
 				BF1C1E3325C3F23300FA7EEA /* GoogleService-Info.plist */,
 				BF37660A2581752F005548BB /* VoirCam.entitlements */,
-				BF61B4CD25812D5F0033ACBC /* AppView.swift */,
+				BF61B4CD25812D5F0033ACBC /* VoirCam.swift */,
 				BF61B4CF25812D600033ACBC /* Assets.xcassets */,
 				BF61B4D425812D600033ACBC /* LaunchScreen.storyboard */,
 				BF61B4D725812D600033ACBC /* Info.plist */,
@@ -99,9 +97,7 @@
 			children = (
 				BF83A90B25C72869003073EC /* App */,
 				BF83A90E25C72869003073EC /* Core */,
-				BF8F3BCD25CC675500E2FCAC /* Extensions */,
 				BF83A91125C7286A003073EC /* ExternalDependencies */,
-				BF83A91325C7286A003073EC /* Models */,
 				BF83A90F25C7286A003073EC /* Onboarding */,
 				BF83A91225C7286A003073EC /* Paywall */,
 				BF83A91025C7286A003073EC /* Resources */,
@@ -202,7 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF61B4CE25812D5F0033ACBC /* AppView.swift in Sources */,
+				BF61B4CE25812D5F0033ACBC /* VoirCam.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

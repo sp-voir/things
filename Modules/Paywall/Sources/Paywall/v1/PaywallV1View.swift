@@ -10,6 +10,7 @@ import ComposableArchitecture
 import RemoteConfiguration
 import InAppPurchases
 import Views
+import Core
 
 public struct PaywallV1View: View {
     

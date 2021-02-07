@@ -30,17 +30,13 @@ let package = Package(
                     package: "ExternalDependencies"
                 ),
                 .product(
-                    name: "ComposableUIKitArchitecture",
-                    package: "ExternalDependencies"
-                ),
-                .product(
                     name: "Firebase",
                     package: "ExternalDependencies"
                 ),
-//                .product(
-//                    name: "CombineExt",
-//                    package: "ExternalDependencies"
-//                ),
+                .product(
+                    name: "CombineExtApp",
+                    package: "ExternalDependencies"
+                ),
             ]
         ),
 //        .target(
