@@ -1,12 +1,12 @@
 import XCTest
-@testable import App
+@testable import Profile
 
-final class AppTests: XCTestCase {
+final class ProfileTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct
         // results.
-        XCTAssertEqual(App().text, "Hello, World!")
+        XCTAssertEqual(Profile().text, "Hello, World!")
     }
 
     static var allTests = [

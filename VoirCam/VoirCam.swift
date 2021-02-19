@@ -6,11 +6,12 @@
 //
 
 import SwiftUI
-import InAppPurchases
-import Paywall
-import RemoteConfiguration
+//import InAppPurchases
+//import Paywall
+//import RemoteConfiguration
 import ComposableArchitectureApp
 import Firebase
+import Root
 
 @main
 struct VoirCam: App {
@@ -24,14 +25,11 @@ struct VoirCam: App {
     
     var body: some Scene {
         WindowGroup {
-            PaywallV1View(
-                store: Store<PaywallV1.State, PaywallV1.Action>(
-                    initialState: PaywallV1.State.initial,
-                    reducer: PaywallV1.reducer,
-                    environment: PaywallV1.Environment(
-                        remoteConfiguration: RemoteConfiguration(),
-                        purchases: InAppPurchases()
-                    )
+            Root.RootView(
+                store: Store<Root.State, Root.Action>(
+                    initialState: Root.State(profile: .initial),
+                    reducer: Root.reducer,
+                    environment: Root.Environment()
                 )
             )
         }
