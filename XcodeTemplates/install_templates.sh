@@ -3,10 +3,10 @@ set -eo pipefail
 IFS=$'\n\t'
 
 # Remove all existing files
-rm -fR ~/Library/Developer/Xcode/Templates/File\ Templates/VoirCam/
+rm -fR ~/Library/Developer/Xcode/Templates/File\ Templates/Things/
 
 # Create directory
-mkdir -p ~/Library/Developer/Xcode/Templates/File\ Templates/VoirCam
+mkdir -p ~/Library/Developer/Xcode/Templates/File\ Templates/Things
 
 # Copy all included templates to the templates directory 
-cp -R VoirCam ~/Library/Developer/Xcode/Templates/File\ Templates
+cp -R Things ~/Library/Developer/Xcode/Templates/File\ Templates

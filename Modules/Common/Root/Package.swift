@@ -4,34 +4,45 @@
 import PackageDescription
 
 let package = Package(
-    name: "InAppPurchases",
+    name: "Root",
     platforms: [
         .iOS(.v14),
     ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
-            name: "InAppPurchases",
-            targets: ["InAppPurchases"]),
+            name: "Root",
+            targets: ["Root"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
-        .package(path: "../Modules/ExternalDependencies"),
+        .package(path: "../ExternalDependencies"),
+        .package(path: "../Profile"),
+        .package(path: "../Features/Welcome"),
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
-            name: "InAppPurchases",
+            name: "Root",
             dependencies: [
                 .product(
-                    name: "PurchasesApp",
+                    name: "ComposableArchitectureApp",
                     package: "ExternalDependencies"
-                )
-            ]),
+                ),
+                .product(
+                    name: "Profile",
+                    package: "Profile"
+                ),
+                .product(
+                    name: "Welcome",
+                    package: "Welcome"
+                ),
+            ]
+        ),
         .testTarget(
-            name: "InAppPurchasesTests",
-            dependencies: ["InAppPurchases"]),
+            name: "RootTests",
+            dependencies: ["Root"]),
     ]
 )
